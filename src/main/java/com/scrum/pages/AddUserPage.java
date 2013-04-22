@@ -1,7 +1,6 @@
 package com.scrum.pages;
 
 import com.scrum.data.User;
-import org.junit.Assert;
 import org.openqa.selenium.By;
 
 /**
@@ -22,6 +21,7 @@ public class AddUserPage extends BasePage {
   }
 
   public void checkThatEditUserPageOpened(User user) {
-    Assert.assertTrue(getDriver().findElement(By.tagName("body")).getText().contains("Edit Member '" + user.userName + "'"));
+    //TODO: Move to src/test into Steps Object Layer
+//    Assert.assertTrue(getDriver().findElement(By.tagName("body")).getText().contains("Edit Member '" + user.userName + "'"));
   }
 }

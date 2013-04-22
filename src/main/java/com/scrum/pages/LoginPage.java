@@ -1,6 +1,5 @@
 package com.scrum.pages;
 
-import org.junit.Assert;
 import org.openqa.selenium.By;
 
 /**
@@ -25,6 +24,7 @@ public class LoginPage  extends BasePage {
   }
 
   public void checkThatPageOpened() {
-    Assert.assertTrue(getDriver().findElement(SIGN_IN).isDisplayed());
+    //TODO: Move to src/test into Steps Object Layer
+//    Assert.assertTrue(getDriver().findElement(SIGN_IN).isDisplayed());
   }
 }
