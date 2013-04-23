@@ -10,6 +10,8 @@ import cucumber.api.java.en.When;
  */
 public class LoginBehavior extends BaseBehavior {
 
+    private LoginAssert loginAssert = new LoginAssert();
+
   @Given("^Administrator wants to login$")
   public void administratorWantsToLogin() {
     adminPerson.atLoginPage().open();
@@ -24,11 +26,11 @@ public class LoginBehavior extends BaseBehavior {
 
   @Then("^Administrator should see home page$")
   public void administratorShouldSeeHomePage() {
-    adminPerson.atHomePage().checkThatPageOpened();
+      loginAssert.checkThatHomePageOpened();
   }
 
   @Then("^Administrator should see login page$")
   public void administratorShouldSeeLoginPage() {
-    adminPerson.atLoginPage().checkThatPageOpened();
+      loginAssert.checkThatPageOpened();
   }
 }

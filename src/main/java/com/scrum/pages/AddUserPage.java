@@ -17,11 +17,6 @@ public class AddUserPage extends BasePage {
     getDriver().findElement(By.name("confirmPassword")).sendKeys(user.password);
     getDriver().findElement(By.name("email")).sendKeys(user.email);
     getDriver().findElement(By.name("saveChanges")).click();
-
   }
 
-  public void checkThatEditUserPageOpened(User user) {
-    //TODO: Move to src/test into Steps Object Layer
-//    Assert.assertTrue(getDriver().findElement(By.tagName("body")).getText().contains("Edit Member '" + user.userName + "'"));
-  }
 }
